@@ -1,33 +1,109 @@
-﻿# The script of the game goes in this file.
+﻿
+define MC = Character("You")
+define L = Character("Luzia", image ="Girl")
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+# Defining images, there has to be a better way to do this
+image girl neutral:
+        'Girl neutral.png'
+        zoom 0.9
 
-define e = Character("Eileen")
+image girl angry:
+        'Girl angry.png'
+        zoom 0.9
+
+image girl happy:
+        'Girl happy.png'
+        zoom 0.9
+
+image girl laugh:
+        'Girl laugh.png'
+        zoom 0.9
+
+image girl pout:
+        'Girl pout.png'
+        zoom 0.9
+
+image girl sad:
+        'Girl sad.png'
+        zoom 0.9
+
+image girl shocked:
+        'Girl shocked.png'
+        zoom 0.9
+
+image girl sleepy:
+        'Girl sleepy.png'
+        zoom 0.9
+
+image girl smile:
+        'Girl smile.png'
+        zoom 0.9
+
+image girl smile2:
+        'Girl smile2.png'
+        zoom 0.9
+
+image girl smug:
+        'Girl smug.png'
+        zoom 0.9
 
 
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+        "And so it begins..."
+        "....."
+        "..."
 
-    scene bg room
+        show bg road with Dissolve(0.75)
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+        MC "Bro, I'm bored as shit."
+        "He says, but there is no one around to hear him."
+        "..."
+        MC "I should try making a visual novel."
+        MC "I mean, how hard can it be?"
 
-    show eileen happy
+        play music "bgm excited.mp3" volume 0.1
 
-    # These display lines of dialogue.
+        show girl smile2 with Dissolve(0.75)
 
-    e "You've created a new Ren'Py game."
+        "???" "Hi..."
+        MC "Hey..."
+        MC "Do I know you?"
+        "???" "You can call me Luzia."
+        show girl sleepy with Dissolve(0.1)
+        L  "You look bored as shit."
+        MC "I am bored as shit!"
+        hide girl with Dissolve(0.5)
+        "....."
+        "They talk about being bored, as shit."
+        show girl smug with Dissolve(0.5)
+        L "Okay, hear me out."
+        L "Choose one of these doors, then we go explore."
+        hide girl with Dissolve(0.5)
+        "Three doors appear out of seemingly nowhere."
+        "While under normal circumstances, this would be strange..."
+        "you are bored as shit anyway."
+        "You decide to go along."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+        menu:
+                "You look at the doors in front of you."
 
-    # This ends the game.
+                "Door 1 looks like a water level...":
+                        jump waterlevel
 
-    return
+                "Door 2 sounds like its got some sort of market going on behind it.":
+                        jump marketlevel
+
+                "Door 3 is eery and quiet.":
+                        jump templelevel
+
+
+label waterlevel:
+        play music "bgm underwater.mp3" fadeout 4.0 fadein 1.5 volume 0.1
+        show bg deep sea with Dissolve(1.5)
+
+        "You enter some strange under water city."
+        show girl smug with Dissolve(0.5)
+        L "Pretty cool, huh?"
