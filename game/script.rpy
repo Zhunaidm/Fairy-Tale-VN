@@ -79,7 +79,8 @@ label start:
         "....."
         "They talk about being bored, as shit."
         show girl smug with Dissolve(0.5)
-        L "Okay, hear me out."
+        L "Okay!"
+        L "Hear me out..."
         L "Choose one of these doors, then we go explore."
         hide girl with Dissolve(0.5)
         "Three doors appear out of seemingly nowhere."
@@ -91,19 +92,31 @@ label start:
                 "You look at the doors in front of you."
 
                 "Door 1 looks like a water level...":
-                        jump waterlevel
+                        jump water_level
 
                 "Door 2 sounds like its got some sort of market going on behind it.":
-                        jump marketlevel
+                        jump market_level
 
                 "Door 3 is eery and quiet.":
-                        jump templelevel
+                        jump nighttime_level
 
 
-label waterlevel:
+label water_level:
         play music "bgm underwater.mp3" fadeout 4.0 fadein 1.5 volume 0.1
         show bg deep sea with Dissolve(1.5)
 
         "You enter some strange under water city."
         show girl smug with Dissolve(0.5)
+        "..."
         L "Pretty cool, huh?"
+
+
+label market_level:
+        play music "bgm market.mp3" fadeout 1.5 fadein 1.0 volume 0.1
+        show bg street market with Pixellate(1.5,7)
+        "..."
+        "The air is thick with the aroma
+        of exotic spices and the lively
+        chatter of merchants haggling with customers."
+        show girl sad with Dissolve(0.5)
+        L "Well, now what..."

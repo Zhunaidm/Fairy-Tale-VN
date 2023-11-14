@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 75, in script
-    show girl sleepy at left with Dissolve()
-TypeError: __init__() missing 1 required positional argument: 'time'
+  File "game/script.rpy", line 115, in script
+    show bg street market with Pixellate(1.5)
+TypeError: __init__() missing 1 required positional argument: 'steps'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 75, in script
-    show girl sleepy at left with Dissolve()
+  File "game/script.rpy", line 115, in script
+    show bg street market with Pixellate(1.5)
   File "C:\Users\Andre.OAKLANDOPERATIO\Desktop\renpy-8.1.2-sdk\renpy\ast.py", line 1678, in execute
     renpy.exports.with_statement(trans, paired=paired)
   File "C:\Users\Andre.OAKLANDOPERATIO\Desktop\renpy-8.1.2-sdk\renpy\exports.py", line 1758, in with_statement
@@ -22,9 +22,9 @@ Full traceback:
     trans = instantiate_transition(None, old_root, layers_root)
   File "C:\Users\Andre.OAKLANDOPERATIO\Desktop\renpy-8.1.2-sdk\renpy\display\core.py", line 3927, in instantiate_transition
     trans = self.ongoing_transition[layer](
-TypeError: __init__() missing 1 required positional argument: 'time'
+TypeError: __init__() missing 1 required positional argument: 'steps'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.2.23090503
 Test name change 0.69
-Fri Nov 10 07:38:37 2023
+Tue Nov 14 18:29:37 2023
